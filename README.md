@@ -23,7 +23,7 @@ on [GitHub](https://github.com/apple/sample-backyard-birds).
 
 To configure the Backyard Birds app to run on your devices, follow these steps:
 
-1. Open the project in Xcode 15 or later.
+1. Open the project in Xcode 26 or later.
 2. Edit the multiplatform target's scheme, and on the Options tab, choose the `Store.storekit` file for StoreKit configuration.
 3. Repeat the previous step for the watchOS target's scheme.
 4. Select the top-level Backyard Birds project.

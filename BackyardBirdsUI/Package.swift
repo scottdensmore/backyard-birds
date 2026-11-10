@@ -1,4 +1,4 @@
-// swift-tools-version: 5.9
+// swift-tools-version: 6.2
 
 /*
 See the LICENSE.txt file for this sample’s licensing information.
@@ -13,10 +13,10 @@ let package = Package(
     name: "BackyardBirdsUI",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v17),
-        .macOS(.v14),
-        .watchOS(.v10),
-        .tvOS(.v17)
+        .iOS(.v26),
+        .macOS(.v26),
+        .watchOS(.v26),
+        .tvOS(.v26)
     ],
     products: [
         .library(
@@ -38,5 +38,6 @@ let package = Package(
             ],
             path: "."
         )
-    ]
+    ],
+    swiftLanguageModes: [.v5]
 )

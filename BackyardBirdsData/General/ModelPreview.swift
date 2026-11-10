@@ -41,10 +41,10 @@ public struct ModelPreview<Model: PersistentModel, Content: View>: View {
                 }
                 .opacity(waitedToShowIssue ? 1 : 0)
                 .task {
-                    Task {
+                    do {
                         try await Task.sleep(for: .seconds(1))
                         waitedToShowIssue = true
-                    }
+                    } catch {}
                 }
             }
         }
