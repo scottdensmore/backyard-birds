@@ -101,7 +101,7 @@ public struct BackyardViewport: View {
         .compositingGroup()
         .task {
             guard backyard.needsToPresentVisitor else { return }
-            Task {
+            do {
                 birdAnimation = .init(offset: CGSize(width: 500, height: -100), scale: 0.1, rotation: .degrees(15))
                 try await Task.sleep(for: .seconds(0.25))
                 withAnimation(.spring(duration: 2, bounce: 0.25)) {
@@ -127,7 +127,7 @@ public struct BackyardViewport: View {
                 withAnimation(.spring(duration: 2, bounce: 0.5)) {
                     birdAnimation = .init(offset: CGSize(width: 10, height: 0), scale: 1, rotation: .degrees(0))
                 }
-            }
+            } catch {}
         }
     }
 }

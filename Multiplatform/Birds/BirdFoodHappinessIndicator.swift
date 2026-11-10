@@ -43,7 +43,7 @@ struct BirdFoodHappinessIndicator: View {
         .padding()
         .frame(height: indicatorHeight)
         .task {
-            Task {
+            do {
                 withAnimation(.spring(duration: 0.5, bounce: 0.5)) {
                     showingHeart = true
                 }
@@ -59,7 +59,7 @@ struct BirdFoodHappinessIndicator: View {
                 withAnimation {
                     showingHeart = false
                 }
-            }
+            } catch {}
         }
     }
 }
